@@ -1,0 +1,14 @@
+<div class="container-fluid">
+
+  <h2 [innerText]="header"></h2>
+  <div class="card spacer" *ngIf="product">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text">{{ product.price | currency }}</p>
+        <p class="card-text">{{ product.description}}</p>
+        <div class="btn-example">
+          <a class="btn btn-primary" role="button" [routerLink]="['']"><i class="bi bi-journals"></i>Back</a>
+      </div>
+    </div>
+  </div>
+</div>
