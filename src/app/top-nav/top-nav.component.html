@@ -15,7 +15,10 @@
       </li> -->
      </ul>
     <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-cart-check-fill"></i> Checkout</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/cart']" type="submit">
+        <i class="bi bi-cart-check-fill"></i> Checkout
+        <span class="badge badge-danger">0</span>
+      </button>
     </form>
   </div>
 </nav>

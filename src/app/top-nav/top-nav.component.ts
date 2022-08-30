@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-top-nav',
@@ -9,9 +10,11 @@ export class TopNavComponent implements OnInit {
 
   isCollapsed = true;
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
   }
+  //How to get the value of added cart from this component
+  //Cart Notification;
 
 }

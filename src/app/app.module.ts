@@ -9,6 +9,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { FormsModule } from '@angular/forms';
 import { BsDropdownConfig, BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     AppComponent,
     TopNavComponent,
     ProductListComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,
