@@ -5,7 +5,7 @@ import { Observable, Subject } from 'rxjs';
 export class NotificationService {
     private subject = new Subject<number>();
 
-    notifyItemCount(itemCount: number) {
+    sendItemCount(itemCount: number) {
         this.subject.next(itemCount);
     }
 
@@ -13,7 +13,7 @@ export class NotificationService {
         this.subject.next();
     }
 
-    onNotify(): Observable<number> {
+    onItemChanged(): Observable<number> {
         return this.subject.asObservable();
     }
 }

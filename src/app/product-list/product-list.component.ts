@@ -2,7 +2,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Product } from '../models/product';
 import { products } from '../products-mock';
 import { CartService } from '../services/cart.service';
-import { NotificationService } from '../services/Notification.service';
+import { NotificationService } from '../services/notification.service';
+
 
 @Component({
   selector: 'app-product-list',
@@ -16,10 +17,11 @@ export class ProductListComponent implements OnInit {
 
 
   constructor(private cartService: CartService,
-    private notifiy: NotificationService) { }
+    private notification: NotificationService) { }
 
 
   ngOnInit(): void {
+
   }
 
   addToCart(product: Product):void {
@@ -28,7 +30,7 @@ export class ProductListComponent implements OnInit {
 
     let itemCount:number = this.cartService.getItems().length;
 
-    this.notifiy.notifyItemCount(itemCount);
+    this.notification.sendItemCount(itemCount);
 
     console.log(product)
   }

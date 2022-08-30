@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { BsDropdownConfig, BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
+import { NotificationService } from './services/notification.service';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { CartComponent } from './cart/cart.component';
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
   ],
-  providers: [{ provide: BsDropdownConfig, useValue: { autoClose: true } }],
+  providers: [NotificationService,
+    { provide: BsDropdownConfig, useValue: { autoClose: true } }, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
